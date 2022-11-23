@@ -8,7 +8,7 @@ Código condição de pagamento
 - Em duas vezes, preço normal da etiqueta sem juros;
 - Acima de duas vezes, preço normal da etiqueta mais juros de 10%;
 */
-
+/*
 const etiqueta =100;
 const CondPagto = 4;
 const aVistDeb = etiqueta - (10/100 * etiqueta) ;
@@ -24,5 +24,25 @@ if (  CondPagto == 1 ) {
     console.log('O valor a ser pago é: R$',DuasX)
 } else if (CondPagto == 4 ) {
     console.log('O valor a ser pago é: R$', AcimaDuasX)
+}*/
+
+function aplicarDesc(valor, desconto) {
+    return (valor - (valor * (desconto / 100)));
 }
 
+function aplicarJur (valor,juros) {
+    return (valor + (valor *(juros/100)))
+}
+
+const precoEtiqueta = 100;
+const formaDePagamento = 4;
+
+if (formaDePagamento === 1) {
+    console.log(aplicarDesc(precoEtiqueta, 10));
+} else if (formaDePagamento === 2) {
+    console.log(aplicarDesc(precoEtiqueta, 15));
+} else if (formaDePagamento === 3) {
+    console.log(precoEtiqueta);
+} else if (formaDePagamento === 4) {
+    console.log(aplicarJur (precoEtiqueta, 10));
+}
