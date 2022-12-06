@@ -1,4 +1,4 @@
-var nome = vitor
+var nome = 'vitor';
 var idade = 29
 var possuifaculdade = true
 var comida = Pizza
